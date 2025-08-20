@@ -1,0 +1,41 @@
+# Apple Notes to Shopping List Configuration
+
+claude:
+  api_key: "set-in-env-file"  # Set CLAUDE_API_KEY in .env file
+  model: "claude-sonnet-4-20250514"
+  max_tokens: 2000
+  temperature: 0.0
+
+apple_notes:
+  mcp_server_url: "local"
+  default_folder: "Shopping Lists"
+
+output:
+  format: "json"  # json, markdown, text
+  save_to_file: true
+  output_directory: "outputs"
+
+# Future features (Phase 2+)
+pricing:
+  enabled: false
+  price_sources: []
+  cache_duration_hours: 24
+
+reviews:
+  enabled: false
+  reddit_search: false
+  sentiment_threshold: 0.6
+
+timing:
+  enabled: false
+  calendar_integration: false
+  urgency_weights:
+    high: 1.0
+    medium: 0.6
+    low: 0.3
+
+# Debug and logging
+debug:
+  enabled: false
+  log_level: "INFO"
+  save_prompts: false
